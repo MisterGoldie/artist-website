@@ -22,9 +22,10 @@ Almost everything lives in one file: [`content/site.ts`](content/site.ts).
   paragraphs, exhibition list, footer year.
 - `projects` — commissions, collaborations, murals, and open-studio projects
   shown on `/projects`. Each entry needs `slug`, `title`, `year`, `kind`, and
-  `summary`, and optionally `with` (collaborator or client), `href`, and
-  `linkLabel`. They are listed in the order written, so newest-first is just
-  editing order.
+  `summary`, and optionally `with` (collaborator or client), `image`, `width`,
+  `height`, `href`, and `linkLabel`. Project images use their real pixel
+  dimensions and are not cropped. They are listed in the order written, so
+  newest-first is just editing order.
 - `works` — the gallery. Each entry needs `slug`, `title`, `year`, `medium`,
   `image`, `width`, `height`, and `kind`, and optionally `dimensions`,
   `tokens`, and `featured`. Works marked `featured: true` also appear on the
@@ -82,11 +83,19 @@ at its true aspect ratio. Works are shown one per row in a centred column, so a
 portrait piece is simply taller than a landscape one. Getting the numbers wrong
 distorts the layout, not the art — the image is scaled to the box you declare.
 
-The six SVG files currently in `public/art/` are generated abstract
-placeholders, deliberately at mixed aspect ratios so the layout can be checked
-with portrait, landscape, and square pieces — delete them once real photographs
-are in place. Once no SVGs are left, you can also remove the
-`dangerouslyAllowSVG` setting from [`next.config.ts`](next.config.ts).
+Keep files at most **1600px on the long edge**, JPEG quality ~86. The gallery
+displays at 672px wide, so anything larger is wasted bytes in the repo. Full
+resolution originals are backed up in `.art-originals/`, which is gitignored and
+never deployed.
+
+Filenames are lowercase. Production runs on Linux, where `steven.JPG` and
+`steven.jpg` are different files, so a mismatch between the filename and the
+`image` path works locally and 404s in production.
+
+### The home page selection
+
+The home page shows works marked `featured: true`. If nothing is marked, it falls
+back to the three most recent, so the section is never empty.
 
 ## Structure
 

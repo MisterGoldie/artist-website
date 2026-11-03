@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/content/site";
 
@@ -36,6 +37,16 @@ export default function ProjectsPage() {
               <h2 className="font-display text-2xl leading-tight sm:text-3xl">
                 {project.title}
               </h2>
+              {project.image && project.width && project.height ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={project.width}
+                  height={project.height}
+                  sizes="(min-width: 640px) 672px, calc(100vw - 3rem)"
+                  className="mt-6 h-auto w-full max-w-2xl"
+                />
+              ) : null}
               {project.with ? (
                 <p className="mt-1.5 text-sm text-muted">
                   with {project.with}

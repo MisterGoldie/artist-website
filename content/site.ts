@@ -14,9 +14,9 @@ export const site = {
     { label: "Email", href: "mailto:goldiesnft@gmail.com" },
   ],
   about: [
-    "Goldie is a painter and mixed-media artist. Trained in traditional oil technique and later drawn to acrylic and collage, the work is built in layers — sanded back, repainted, with earlier marks left showing through.",
-    "The recent series returns to interiors: the corner of a studio, a chair by a window, a table just after everyone has left. The paintings are small on purpose. They ask you to stand close.",
-    "Work is available through the studio, with occasional open studios and small-group viewings. Write to say hello or to ask about availability.",
+    "Michael Hollingsworth (Goldie) is a narrative driven expressionist artist based in the Chicagoland area. His preferred medium is acrylic painting and he has been working as a professional artist for a number of years.",
+    "Michael's work is characterized by a unique combination of abstract and expressionism. His work is often mixed media, incorporating acrylic paints, oil pens, paper, and more. Michael’s work is characterized by bold brushstrokes and vibrant colors, which capture the raw emotion and energy of the human experience. He works primarily with acrylics on canvas, using a variety of techniques to achieve a range of textures and effects. Michael's art is heavily influenced by the late Jean - Michel Basquiat, and he aims to leave a legacy much like that of Jean - Michel.",
+    "Michael has exhibited art in numerous galleries and museums across the country, including China and the United Kingdom. He has had numerous speaking engagements throughout the United States, highlighting his career and accomplishments thus far within not only the web2 space but the web3 space as well. Michael has also worked with a number of notable clients, including Rolling Stone Magazine and Coinbase.",
   ],
   exhibitions: [
     { year: "2025", title: "Quiet Rooms", venue: "Studio open house" },
@@ -76,6 +76,9 @@ export type Project = {
   /** Collaborators, client, or venue. */
   with?: string;
   summary: string;
+  image?: string;
+  width?: number;
+  height?: number;
   href?: string;
   linkLabel?: string;
 };
@@ -109,6 +112,19 @@ export const projects: Project[] = [
     kind: "Open studio",
     summary:
       "Two days of open doors: works in progress on the wall, unfinished panels face-out, and the whole collection laid out for viewing. The annual chance to see things before they are resolved.",
+  },
+  {
+    slug: "scary-garys",
+    title: "Scary Garys",
+    year: "2022",
+    kind: "Ethereum PFP project",
+    summary:
+      "An Ethereum PFP project that sold out all 750 NFTs within its first 24 hours of launching.",
+    image: "/art/scarygarys.jpg",
+    width: 1600,
+    height: 892,
+    href: "https://opensea.io/collection/scary-garys",
+    linkLabel: "OpenSea collection",
   },
 ];
 
@@ -153,68 +169,6 @@ export const works: Work[] = [
         collection: "Characters",
         identifier: "Token #2",
         url: "https://opensea.io/item/zora/0xf0ad795f0a2cfb5fd3cdc419bfc58a18feef2ca1/2",
-        label: "OpenSea",
-      },
-    ],
-  },
-  {
-    slug: "afternoon-window",
-    title: "Afternoon Window",
-    year: "2025",
-    medium: "Generative painting, on-chain edition",
-    dimensions: "4000 × 5000 px",
-    image: "/art/afternoon-window.svg",
-    width: 1000,
-    height: 1250,
-    kind: "digital",
-    tokens: [
-      {
-        chain: "Base",
-        standard: "ERC-721",
-        collection: "Quiet Rooms",
-        url: "https://opensea.io/collection/your-collection-name",
-        label: "OpenSea",
-      },
-    ],
-    featured: true,
-  },
-  {
-    slug: "quiet-room",
-    title: "Quiet Room",
-    year: "2025",
-    medium: "Generative painting, on-chain edition",
-    dimensions: "4200 × 3000 px",
-    image: "/art/quiet-room.svg",
-    width: 1400,
-    height: 1000,
-    kind: "digital",
-    tokens: [
-      {
-        chain: "Base",
-        standard: "ERC-721",
-        collection: "Quiet Rooms",
-        url: "https://opensea.io/collection/your-collection-name",
-        label: "OpenSea",
-      },
-    ],
-    featured: true,
-  },
-  {
-    slug: "late-light",
-    title: "Late Light",
-    year: "2024",
-    medium: "Digital painting, 1 of 1",
-    dimensions: "3300 × 3300 px",
-    image: "/art/late-light.svg",
-    width: 1100,
-    height: 1100,
-    kind: "digital",
-    tokens: [
-      {
-        chain: "Base",
-        standard: "ERC-721",
-        collection: "Late Light",
-        url: "https://opensea.io/collection/your-collection-name",
         label: "OpenSea",
       },
     ],
@@ -321,7 +275,7 @@ export const works: Work[] = [
     year: "2024",
     medium: "Acrylic and oil pen on canvas",
     dimensions: "20 × 20 in",
-    image: "/art/quiet.jpg",
+    image: "/art/quiet.JPG",
     width: 1600,
     height: 1598,
     kind: "physical",
@@ -349,40 +303,6 @@ export const works: Work[] = [
     height: 1600,
     kind: "physical",
   },
-  {
-    slug: "kitchen-table",
-    title: "Kitchen Table",
-    year: "2024",
-    medium: "Acrylic and graphite on canvas",
-    dimensions: "50 × 50 cm",
-    image: "/art/kitchen-table.svg",
-    width: 1000,
-    height: 1250,
-    kind: "physical",
-    featured: true,
-  },
-  {
-    slug: "two-chairs",
-    title: "Two Chairs",
-    year: "2024",
-    medium: "Acrylic on panel",
-    dimensions: "45 × 60 cm",
-    image: "/art/two-chairs.svg",
-    width: 1500,
-    height: 1000,
-    kind: "physical",
-  },
-  {
-    slug: "gold-hour",
-    title: "Gold Hour",
-    year: "2023",
-    medium: "Oil and wax on board",
-    dimensions: "25 × 35 cm",
-    image: "/art/gold-hour.svg",
-    width: 1000,
-    height: 1250,
-    kind: "physical",
-  },
 ];
 
 /** Newest first. Sorting here means adding a work never needs manual reordering.
@@ -391,4 +311,10 @@ const yearNum = (work: Work) => Number(work.year.slice(0, 4));
 
 export const worksByYear: Work[] = [...works].sort((a, b) => yearNum(b) - yearNum(a));
 
-export const featuredWorks = worksByYear.filter((work) => work.featured);
+/** Home page selection. Mark a work `featured: true` to control it directly;
+ *  with nothing marked, fall back to the three most recent so the section is
+ *  never empty. */
+export const featuredWorks = (() => {
+  const marked = worksByYear.filter((work) => work.featured);
+  return marked.length > 0 ? marked : worksByYear.slice(0, 3);
+})();
