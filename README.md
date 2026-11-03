@@ -18,7 +18,7 @@ npm run lint
 
 Almost everything lives in one file: [`content/site.ts`](content/site.ts).
 
-- `site` — name, role, tagline, intro, email, studio note, social links, bio
+- `site` — name, role, tagline, intro, email, social links, bio
   paragraphs, exhibition list, footer year.
 - `projects` — commissions, collaborations, murals, and open-studio projects
   shown on `/projects`. Each entry needs `slug`, `title`, `year`, `kind`, and
@@ -105,7 +105,7 @@ app/
   page.tsx          # home
   works/page.tsx    # full gallery
   projects/page.tsx # commissions, collaborations, murals
-  about/page.tsx    # bio + exhibitions
+  about/page.tsx    # bio
   contact/page.tsx  # email + socials
   not-found.tsx     # 404
 components/

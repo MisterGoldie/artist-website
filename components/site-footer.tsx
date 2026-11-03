@@ -7,7 +7,6 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-5xl flex-col gap-6 px-6 py-10 text-sm text-muted sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="font-display text-xl text-ink">{site.name}</p>
-          <p className="mt-1">{site.location}</p>
         </div>
 
         <ul className="flex flex-wrap gap-x-6 gap-y-2">

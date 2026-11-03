@@ -8,20 +8,15 @@ export const site = {
   intro:
     "I'm Goldie, a painter working in acrylic and mixed media. My work circles around light on familiar surfaces — a windowsill, a kitchen table, the last hour of the afternoon.",
   email: "goldiesnft@gmail.com",
-  location: "Studio visits by appointment",
   links: [
-    { label: "Instagram", href: "https://instagram.com/goldiesnft" },
+    { label: "Instagram", href: "https://www.instagram.com/GoldiesNFTart" },
+    { label: "X", href: "https://x.com/GoldiesNFTart" },
     { label: "Email", href: "mailto:goldiesnft@gmail.com" },
   ],
   about: [
-    "Michael Hollingsworth (Goldie) is a narrative driven expressionist artist based in the Chicagoland area. His preferred medium is acrylic painting and he has been working as a professional artist for a number of years.",
-    "Michael's work is characterized by a unique combination of abstract and expressionism. His work is often mixed media, incorporating acrylic paints, oil pens, paper, and more. Michael’s work is characterized by bold brushstrokes and vibrant colors, which capture the raw emotion and energy of the human experience. He works primarily with acrylics on canvas, using a variety of techniques to achieve a range of textures and effects. Michael's art is heavily influenced by the late Jean - Michel Basquiat, and he aims to leave a legacy much like that of Jean - Michel.",
-    "Michael has exhibited art in numerous galleries and museums across the country, including China and the United Kingdom. He has had numerous speaking engagements throughout the United States, highlighting his career and accomplishments thus far within not only the web2 space but the web3 space as well. Michael has also worked with a number of notable clients, including Rolling Stone Magazine and Coinbase.",
-  ],
-  exhibitions: [
-    { year: "2025", title: "Quiet Rooms", venue: "Studio open house" },
-    { year: "2024", title: "Late Light", venue: "Group exhibition, local gallery" },
-    { year: "2023", title: "First Marks", venue: "Self-published catalogue" },
+    "Michael Hollingsworth, known professionally as Goldie, is a narrative-driven expressionist artist based in the Chicagoland area. Working primarily in acrylic, he has built a professional practice around paintings that turn personal and cultural experience into vivid visual stories.",
+    "Goldie's work moves between abstraction and expressionism, often combining acrylic paint with oil pen, paper, and other mixed media. Bold brushstrokes, saturated color, and layered surfaces give the paintings their emotional charge and sense of movement. Influenced by Jean-Michel Basquiat, Goldie aims to create work that feels immediate, honest, and enduring.",
+    "Goldie has exhibited in galleries and museums across the United States, China, and the United Kingdom. He has also spoken throughout the United States about his career across both Web2 and Web3, and has worked with notable clients including Rolling Stone and Coinbase.",
   ],
   // Bump this when you want the footer year to change.
   copyrightYear: 2026,

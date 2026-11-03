@@ -60,7 +60,7 @@ export default function HomePage() {
               back.&rdquo;
             </p>
             <footer className="mt-6 text-xs uppercase tracking-[0.2em] text-muted">
-              {site.name}, studio notes
+              {site.name}, artist notes
             </footer>
           </blockquote>
         </div>

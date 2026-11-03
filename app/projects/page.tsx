@@ -6,7 +6,7 @@ import { projects } from "@/content/site";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Commissions, collaborations, murals, and open studio projects outside the studio series.",
+    "Commissions, collaborations, murals, and projects outside the main body of work.",
 };
 
 export default function ProjectsPage() {
@@ -42,6 +42,7 @@ export default function ProjectsPage() {
                   alt={project.title}
                   width={project.width}
                   height={project.height}
+                  loading={project.slug === "gary-ghosts" ? "eager" : undefined}
                   sizes="(min-width: 640px) 672px, calc(100vw - 3rem)"
                   className="mt-6 h-auto w-full max-w-2xl"
                 />

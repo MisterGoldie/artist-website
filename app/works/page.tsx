@@ -20,7 +20,7 @@ const sections: { kind: WorkKind; title: string; blurb: string }[] = [
     kind: "physical",
     title: "Physical",
     blurb:
-      "Paintings on panel, board, and canvas. Available through the studio.",
+      "Paintings on panel, board, and canvas. Available through the artist.",
   },
 ];
 

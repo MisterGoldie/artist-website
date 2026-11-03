@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with ${site.name} about available work, studio visits, and commissions.`,
+  description: `Get in touch with ${site.name} about available work, events, and commissions.`,
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
         Contact
       </h1>
       <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
-        For available work, studio visits, or commissions, email is the simplest
+        For available work, event information, or commissions, email is the simplest
         way to reach me. I usually reply within a few days.
       </p>
 
@@ -28,7 +28,7 @@ export default function ContactPage() {
         </a>
       </div>
 
-      <div className="mt-12 grid gap-10 sm:grid-cols-2">
+      <div className="mt-12">
         <div>
           <h2 className="text-xs uppercase tracking-[0.2em] text-muted">
             Elsewhere
@@ -47,17 +47,6 @@ export default function ContactPage() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div>
-          <h2 className="text-xs uppercase tracking-[0.2em] text-muted">
-            Studio
-          </h2>
-          <p className="mt-4 text-lg">{site.location}</p>
-          <p className="mt-2 text-sm text-muted">
-            Visits are arranged by email so the work can be laid out before you
-            arrive.
-          </p>
         </div>
       </div>
     </section>

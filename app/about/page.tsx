@@ -18,12 +18,6 @@ export default function AboutPage() {
         <dl className="space-y-5 text-sm">
           <div>
             <dt className="text-xs uppercase tracking-[0.18em] text-muted">
-              Studio
-            </dt>
-            <dd className="mt-1">{site.location}</dd>
-          </div>
-          <div>
-            <dt className="text-xs uppercase tracking-[0.18em] text-muted">
               Practice
             </dt>
             <dd className="mt-1">{site.role}</dd>
@@ -48,26 +42,6 @@ export default function AboutPage() {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-      </div>
-
-      <div className="mt-20 border-t border-line pt-8">
-        <h2 className="text-xs uppercase tracking-[0.2em] text-muted">
-          Selected exhibitions
-        </h2>
-        <ul className="mt-6 divide-y divide-line">
-          {site.exhibitions.map((exhibition) => (
-            <li
-              key={`${exhibition.year}-${exhibition.title}`}
-              className="flex flex-wrap items-baseline gap-x-6 gap-y-1 py-4"
-            >
-              <span className="w-16 shrink-0 text-sm tabular-nums text-muted">
-                {exhibition.year}
-              </span>
-              <span className="font-display text-lg">{exhibition.title}</span>
-              <span className="text-sm text-muted">{exhibition.venue}</span>
-            </li>
-          ))}
-        </ul>
       </div>
 
       <p className="mt-16">
