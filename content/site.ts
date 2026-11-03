@@ -114,12 +114,38 @@ export const projects: Project[] = [
       "Two days of open doors: works in progress on the wall, unfinished panels face-out, and the whole collection laid out for viewing. The annual chance to see things before they are resolved.",
   },
   {
+    slug: "crudeboys",
+    title: "Crudeboys",
+    year: "2024",
+    kind: "Dogecoin project",
+    summary:
+      "Crudely drawn characters centered around the standard 52 card playing deck.",
+    image: "/art/crudeboys.PNG",
+    width: 1500,
+    height: 500,
+    href: "https://doggy.market/nfts/crudeboys",
+    linkLabel: "Dogecoin marketplace",
+  },
+  {
+    slug: "cupscriptions",
+    title: "Cupscriptions",
+    year: "2023",
+    kind: "Ethscription PFP project",
+    summary:
+      "Cupscriptions is a 5,000 count art passion project created by Goldie. The goal is to bring ethscriptions to a new underexposed audience of art talent, collectors, and communities to the ethscription ecosystem.",
+    image: "/art/cupscriptions.PNG",
+    width: 1500,
+    height: 500,
+    href: "https://cupscriptions.vercel.app/",
+    linkLabel: "Cupscriptions website",
+  },
+  {
     slug: "scary-garys",
     title: "Scary Garys",
     year: "2022",
     kind: "Ethereum PFP project",
     summary:
-      "An Ethereum PFP project that sold out all 750 NFTs within its first 24 hours of launching.",
+      "The concept of the Scary Garys digital collectibles is inspired by the nickname of Goldie’s hometown Gary, Indiana. Throughout this series Goldie aims to transform the narrative of his hometown into a new light. The collection consists of 750 generative NFTs featuring a wide variety of entirely unique attributes. This project is accompanied by various benefits to supporters of Goldie, like access to airdrops, giveaways, and future projects.",
     image: "/art/scarygarys.jpg",
     width: 1600,
     height: 892,
@@ -134,7 +160,7 @@ export const projects: Project[] = [
 export const works: Work[] = [
   {
     slug: "lastdays",
-    title: "Last Days",
+    title: "Last Days In October",
     year: "2026",
     medium: "Digital work",
     dimensions: "2000 × 2000 px",
@@ -152,6 +178,17 @@ export const works: Work[] = [
         label: "OpenSea",
       },
     ],
+  },
+  {
+    slug: "monster-maxie",
+    title: "Monster Maxie",
+    year: "2025",
+    medium: "Digital work",
+    dimensions: "1300 × 1500 px",
+    image: "/art/maxiemonster.PNG",
+    width: 1300,
+    height: 1500,
+    kind: "digital",
   },
   {
     slug: "raymone",

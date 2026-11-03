@@ -30,7 +30,7 @@ export default function WorksPage() {
       <h1 className="font-display text-4xl tracking-tight sm:text-5xl">Works</h1>
       <p className="mt-4 max-w-xl text-muted">
         Two bodies of work: digital editions minted on-chain, and physical
-        paintings made in the studio.
+        paintings made on canvas.
       </p>
 
       {sections.map((section) => {

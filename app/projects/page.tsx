@@ -16,8 +16,7 @@ export default function ProjectsPage() {
         Projects
       </h1>
       <p className="mt-4 max-w-xl text-muted">
-        Commissions, collaborations, and exhibitions that sit outside the studio
-        series — including what is on the easel right now.
+        Art collaborations, projects, and events
       </p>
 
       <ul className="mt-14 divide-y divide-line border-t border-line">
