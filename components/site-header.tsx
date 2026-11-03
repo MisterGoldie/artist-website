@@ -6,6 +6,7 @@ import { site } from "@/content/site";
 
 const nav = [
   { href: "/works", label: "Works" },
+  { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -15,7 +16,7 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-line">
-      <div className="mx-auto flex max-w-5xl items-baseline justify-between gap-6 px-6 py-5">
+      <div className="mx-auto flex max-w-5xl flex-col gap-3 px-6 py-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
         <Link
           href="/"
           className="font-display text-2xl tracking-tight hover:text-accent"
@@ -24,7 +25,7 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Main">
-          <ul className="flex items-baseline gap-6 text-xs uppercase tracking-[0.18em]">
+          <ul className="flex flex-wrap items-baseline gap-x-5 gap-y-2 text-xs uppercase tracking-[0.16em] sm:justify-end sm:gap-x-6 sm:tracking-[0.18em]">
             {nav.map((item) => {
               const active = pathname === item.href;
               return (

@@ -20,6 +20,11 @@ Almost everything lives in one file: [`content/site.ts`](content/site.ts).
 
 - `site` — name, role, tagline, intro, email, studio note, social links, bio
   paragraphs, exhibition list, footer year.
+- `projects` — commissions, collaborations, murals, and open-studio projects
+  shown on `/projects`. Each entry needs `slug`, `title`, `year`, `kind`, and
+  `summary`, and optionally `with` (collaborator or client), `href`, and
+  `linkLabel`. They are listed in the order written, so newest-first is just
+  editing order.
 - `works` — the gallery. Each entry needs `slug`, `title`, `year`, `medium`,
   `image`, `width`, and `height`, and optionally `dimensions` and `featured`.
   Works marked `featured: true` also appear on the home page.
@@ -51,6 +56,7 @@ app/
   layout.tsx        # shell: fonts, header, footer, metadata
   page.tsx          # home
   works/page.tsx    # full gallery
+  projects/page.tsx # commissions, collaborations, murals
   about/page.tsx    # bio + exhibitions
   contact/page.tsx  # email + socials
   not-found.tsx     # 404

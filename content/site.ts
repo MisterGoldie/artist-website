@@ -41,6 +41,52 @@ export type Work = {
   featured?: boolean;
 };
 
+export type Project = {
+  slug: string;
+  title: string;
+  /** Single year or a range, e.g. "2025" or "2024–2025". */
+  year: string;
+  /** Commission, Collaboration, Mural, Exhibition… */
+  kind: string;
+  /** Collaborators, client, or venue. */
+  with?: string;
+  summary: string;
+  href?: string;
+  linkLabel?: string;
+};
+
+// Placeholders — replace with your own commissions, collaborations, and murals.
+export const projects: Project[] = [
+  {
+    slug: "mural-main-street",
+    title: "Main Street Mural",
+    year: "2025",
+    kind: "Mural commission",
+    with: "City Arts Council",
+    summary:
+      "A four-metre exterior mural for a storefront wall, painted over eight days with a scaffold and a small crew. Built around the same light-and-interior vocabulary as the studio work, scaled up.",
+    href: "https://instagram.com/goldiesnft",
+    linkLabel: "Process photos",
+  },
+  {
+    slug: "late-light-collaboration",
+    title: "Late Light, together",
+    year: "2024",
+    kind: "Collaboration",
+    with: "a poet and a sound artist",
+    summary:
+      "A joint exhibition pairing twelve paintings with twelve short texts and a looping room recording. Each painting was made in response to a text, and each text revised against the finished panel.",
+  },
+  {
+    slug: "studio-open-house",
+    title: "Open Studio Weekend",
+    year: "2024",
+    kind: "Open studio",
+    summary:
+      "Two days of open doors: works in progress on the wall, unfinished panels face-out, and the whole collection laid out for viewing. The annual chance to see things before they are resolved.",
+  },
+];
+
 export const works: Work[] = [
   {
     slug: "afternoon-window",
