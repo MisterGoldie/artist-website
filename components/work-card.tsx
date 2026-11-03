@@ -29,6 +29,37 @@ export function WorkCard({
           {work.dimensions ? ` · ${work.dimensions}` : ""}
           <span className="tabular-nums"> · {work.year}</span>
         </p>
+
+        {work.tokens?.length ? (
+          <div className="mt-2 space-y-1">
+            {work.tokens.map((token) => {
+              const parts = [
+                token.chain,
+                token.collection,
+                token.edition,
+                token.identifier,
+                token.weight,
+              ].filter(Boolean);
+
+              return (
+                <p
+                  key={token.url}
+                  className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm text-muted"
+                >
+                  <span>{parts.join(" · ")}</span>
+                  <a
+                    href={token.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline decoration-line underline-offset-4 transition-colors hover:text-accent"
+                  >
+                    {token.label ?? "View"} &rarr;
+                  </a>
+                </p>
+              );
+            })}
+          </div>
+        ) : null}
       </figcaption>
     </figure>
   );

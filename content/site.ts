@@ -27,17 +27,42 @@ export const site = {
   copyrightYear: 2026,
 };
 
+export type WorkKind = "physical" | "digital";
+
+/** An on-chain reference. A work can carry several — e.g. an Ethereum edition
+ *  and a Bitcoin ordinal of the same piece. */
+export type Token = {
+  chain: string;
+  standard?: string;
+  collection?: string;
+  /** Edition within the collection, e.g. "XI of XI". */
+  edition?: string;
+  /** Human-readable id, e.g. "Inscription #76,820,445". */
+  identifier?: string;
+  /** Artifact size and type, e.g. "72 KB glTF". */
+  weight?: string;
+  url: string;
+  label?: string;
+};
+
 export type Work = {
   slug: string;
   title: string;
   year: string;
   medium: string;
+  /** Physical size in cm/in, or pixel dimensions for digital work. */
   dimensions?: string;
   image: string;
   /** Intrinsic pixel size of the image file. Artwork is never cropped, so the
    *  rendered box takes this aspect ratio. Update if you swap the file. */
   width: number;
   height: number;
+  /** Which section of /works the piece appears in. A tokenized work is still
+   *  whatever it actually is — a physical painting with an ordinal stays
+   *  "physical". */
+  kind: WorkKind;
+  /** On-chain references. Rendered under the caption on any kind of work. */
+  tokens?: Token[];
   featured?: boolean;
 };
 
@@ -87,39 +112,179 @@ export const projects: Project[] = [
   },
 ];
 
+// Placeholders — replace with your own work. `kind` decides which section of
+// /works a piece lands in; digital pieces can add a collection and a
+// marketplace link.
 export const works: Work[] = [
+  {
+    slug: "lastdays",
+    title: "Last Days",
+    year: "2026",
+    medium: "Digital work",
+    dimensions: "2000 × 2000 px",
+    image: "/art/lastdays.png",
+    width: 2000,
+    height: 2000,
+    kind: "digital",
+    tokens: [
+      {
+        chain: "Base",
+        standard: "ERC-721",
+        collection: "October 2026",
+        identifier: "Token #1",
+        url: "https://opensea.io/item/base/0xb62e827f4cbe8005646c538a2ec9b754106fb34c/1",
+        label: "OpenSea",
+      },
+    ],
+  },
   {
     slug: "afternoon-window",
     title: "Afternoon Window",
     year: "2025",
-    medium: "Acrylic and collage on panel",
-    dimensions: "40 × 50 cm",
+    medium: "Generative painting, on-chain edition",
+    dimensions: "4000 × 5000 px",
     image: "/art/afternoon-window.svg",
     width: 1000,
     height: 1250,
+    kind: "digital",
+    tokens: [
+      {
+        chain: "Base",
+        standard: "ERC-721",
+        collection: "Quiet Rooms",
+        url: "https://opensea.io/collection/your-collection-name",
+        label: "OpenSea",
+      },
+    ],
     featured: true,
   },
   {
     slug: "quiet-room",
     title: "Quiet Room",
     year: "2025",
-    medium: "Acrylic on linen",
-    dimensions: "60 × 75 cm",
+    medium: "Generative painting, on-chain edition",
+    dimensions: "4200 × 3000 px",
     image: "/art/quiet-room.svg",
     width: 1400,
     height: 1000,
+    kind: "digital",
+    tokens: [
+      {
+        chain: "Base",
+        standard: "ERC-721",
+        collection: "Quiet Rooms",
+        url: "https://opensea.io/collection/your-collection-name",
+        label: "OpenSea",
+      },
+    ],
     featured: true,
   },
   {
     slug: "late-light",
     title: "Late Light",
     year: "2024",
-    medium: "Oil on board",
-    dimensions: "30 × 40 cm",
+    medium: "Digital painting, 1 of 1",
+    dimensions: "3300 × 3300 px",
     image: "/art/late-light.svg",
     width: 1100,
     height: 1100,
-    featured: true,
+    kind: "digital",
+    tokens: [
+      {
+        chain: "Base",
+        standard: "ERC-721",
+        collection: "Late Light",
+        url: "https://opensea.io/collection/your-collection-name",
+        label: "OpenSea",
+      },
+    ],
+  },
+  {
+    slug: "bruno",
+    title: "Bruno",
+    year: "2021",
+    medium: "Acrylic and oil pen on canvas",
+    dimensions: "11 × 14 in",
+    image: "/art/bruno.jpeg",
+    width: 2655,
+    height: 3399,
+    kind: "physical",
+  },
+  {
+    slug: "gacy",
+    title: "Gacy",
+    year: "2021",
+    medium: "Acrylic paint and oil pen",
+    dimensions: "11 × 14 in",
+    image: "/art/gacy.jpeg",
+    width: 1560,
+    height: 2013,
+    kind: "physical",
+  },
+  {
+    slug: "not-lickitung",
+    title: "Not Lickitung",
+    year: "2022",
+    medium: "Acrylic and oil pen",
+    dimensions: "11 × 14 in",
+    image: "/art/notlickitung.jpeg",
+    width: 2793,
+    height: 2179,
+    kind: "physical",
+    tokens: [
+      {
+        chain: "Ethereum",
+        standard: "ERC-721",
+        collection: "KnownOrigin",
+        identifier: "Token #2511004",
+        url: "https://opensea.io/item/ethereum/0xabb3738f04dc2ec20f4ae4462c3d069d02ae045b/2511004",
+        label: "OpenSea",
+      },
+    ],
+  },
+  {
+    slug: "dumb-zombie",
+    title: "Dumb Zombie",
+    year: "2022",
+    medium: "Acrylic and oil pen on canvas",
+    dimensions: "11 × 14 in",
+    image: "/art/dumbzombie.jpeg",
+    width: 2269,
+    height: 2878,
+    kind: "physical",
+    tokens: [
+      {
+        chain: "Ethereum",
+        standard: "ERC-721",
+        collection: "KnownOrigin",
+        identifier: "Token #2770001",
+        url: "https://opensea.io/item/ethereum/0xabb3738f04dc2ec20f4ae4462c3d069d02ae045b/2770001",
+        label: "OpenSea",
+      },
+    ],
+  },
+  {
+    slug: "quiet",
+    title: "Quiet",
+    year: "2024",
+    medium: "Acrylic and oil pen on canvas",
+    dimensions: "20 × 20 in",
+    image: "/art/quiet.JPG",
+    width: 3067,
+    height: 3064,
+    kind: "physical",
+    tokens: [
+      {
+        chain: "Bitcoin",
+        standard: "Ordinal",
+        collection: "GOLDIE X BASED V6",
+        edition: "XI of XI",
+        identifier: "Inscription #76,820,445",
+        weight: "72 KB glTF",
+        url: "https://ordinals.com/inscription/e9804a3794dd0ad7a2bbc44fc02dee7d9d6dbcf0db10e69eb4e2ac36acd4131di0",
+        label: "ordinals.com",
+      },
+    ],
   },
   {
     slug: "kitchen-table",
@@ -130,6 +295,8 @@ export const works: Work[] = [
     image: "/art/kitchen-table.svg",
     width: 1000,
     height: 1250,
+    kind: "physical",
+    featured: true,
   },
   {
     slug: "two-chairs",
@@ -140,6 +307,7 @@ export const works: Work[] = [
     image: "/art/two-chairs.svg",
     width: 1500,
     height: 1000,
+    kind: "physical",
   },
   {
     slug: "gold-hour",
@@ -150,6 +318,7 @@ export const works: Work[] = [
     image: "/art/gold-hour.svg",
     width: 1000,
     height: 1250,
+    kind: "physical",
   },
 ];
 

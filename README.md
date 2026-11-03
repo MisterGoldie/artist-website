@@ -26,8 +26,47 @@ Almost everything lives in one file: [`content/site.ts`](content/site.ts).
   `linkLabel`. They are listed in the order written, so newest-first is just
   editing order.
 - `works` — the gallery. Each entry needs `slug`, `title`, `year`, `medium`,
-  `image`, `width`, and `height`, and optionally `dimensions` and `featured`.
-  Works marked `featured: true` also appear on the home page.
+  `image`, `width`, `height`, and `kind`, and optionally `dimensions`,
+  `tokens`, and `featured`. Works marked `featured: true` also appear on the
+  home page.
+
+### Physical vs digital work
+
+`/works` renders up to two sections, driven by each work's `kind`:
+
+| `kind` | Appears under |
+|---|---|
+| `"digital"` | Digital |
+| `"physical"` | Physical |
+
+`kind` is just what the piece is. A physical painting that is also tokenized
+stays `"physical"` — the on-chain info is carried separately in `tokens` and
+shows under the caption either way.
+
+### On-chain references
+
+Any work can carry a `tokens` array, and it renders under the caption whatever
+the `kind` is. A work can hold several tokens, so the same piece can have an
+Ethereum edition *and* a Bitcoin ordinal.
+
+| Token field | Example |
+|---|---|
+| `chain` | `"Bitcoin"`, `"Base"`, `"Ethereum"` |
+| `standard` | `"Ordinal"`, `"ERC-721"` |
+| `collection` | `"GOLDIE X BASED V6"` |
+| `edition` | `"XI of XI"` (optional) |
+| `identifier` | `"Inscription #76,820,445"` (optional) |
+| `weight` | `"72 KB glTF"` — artifact size/type (optional) |
+| `url` | where the token lives |
+| `label` | link text, e.g. `"ordinals.com"` (defaults to "View") |
+
+Only `chain` and `url` are required. Everything else is optional, so a work with
+no on-chain presence simply omits `tokens` and shows the plain caption.
+
+Section order lives in the `sections` array at the top of
+[`app/works/page.tsx`](app/works/page.tsx) — currently digital first, since
+that's the primary practice. A section with no works in it is skipped
+entirely, so the page stays sensible while you're still loading pieces in.
 
 Page copy that isn't artist-specific (headings, button labels) lives in
 `app/*/page.tsx`.
@@ -36,7 +75,7 @@ Page copy that isn't artist-specific (headings, button labels) lives in
 
 1. Drop the image into `public/art/` (e.g. `public/art/new-piece.jpg`).
 2. Add an entry to `works` in `content/site.ts` pointing at `/art/new-piece.jpg`,
-   with the file's real pixel `width` and `height`.
+   with the file's real pixel `width` and `height`, and a `kind`.
 
 `width`/`height` matter: the gallery never crops artwork, so each image renders
 at its true aspect ratio. Portrait, landscape, and square pieces can sit next to
