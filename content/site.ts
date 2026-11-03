@@ -4,9 +4,9 @@
 export const site = {
   name: "Goldie",
   role: "Painting & visual art",
-  tagline: "Paintings about light, memory, and the quiet parts of a room.",
+  tagline: "Colorful, raw paintings with crooked lines, cartoonish characters, and a creepy edge.",
   intro:
-    "I'm Goldie, a painter from the Chicagoland area, working mainly in acrylic and mixed media. My work centers around a raw, illustrative comic style with a heavy gothic/punk influence.",
+    "I'm Goldie, a painter from the Chicagoland area, working mainly in acrylics and mixed media. My work centers around a raw, illustrative comic style with a heavy gothic/punk influence.",
   email: "goldiesnft@gmail.com",
   links: [
     { label: "Instagram", href: "https://www.instagram.com/GoldiesNFTart" },
