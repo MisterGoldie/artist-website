@@ -6,7 +6,7 @@ export const site = {
   role: "Painting & visual art",
   tagline: "Paintings about light, memory, and the quiet parts of a room.",
   intro:
-    "I'm Goldie, a painter working in acrylic and mixed media. My work circles around light on familiar surfaces — a windowsill, a kitchen table, the last hour of the afternoon.",
+    "I'm Goldie, a painter from the Chicagoland area,working mainly in acrylic and mixed media. My work centers around a raw, illustrative comic style with a heavy gothic/punk influence.",
   email: "goldiesnft@gmail.com",
   links: [
     { label: "Instagram", href: "https://www.instagram.com/GoldiesNFTart" },

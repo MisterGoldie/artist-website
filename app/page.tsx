@@ -55,9 +55,9 @@ export default function HomePage() {
         <div className="border-y border-line py-14">
           <blockquote className="mx-auto max-w-2xl text-center">
             <p className="font-display text-2xl leading-snug text-balance sm:text-3xl">
-              &ldquo;Small paintings ask you to stand close — to notice the
-              grain of the panel, the places where the paint was sanded
-              back.&rdquo;
+              &ldquo;I create based on feeling, I create based on my reality.
+              The uneven lines and colors are a representation of the world
+              and its imperfections.&rdquo;
             </p>
             <footer className="mt-6 text-xs uppercase tracking-[0.2em] text-muted">
               {site.name}, artist notes
