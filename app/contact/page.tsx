@@ -17,7 +17,7 @@ export default function ContactPage() {
         way to reach me. I usually reply within a few days.
       </p>
 
-      <div className="mt-12 border-t border-line py-10">
+      <div className="mt-12 border-y border-line py-10 text-center">
         <a
           href={`mailto:${site.email}`}
           className="font-display text-2xl break-words transition-colors hover:text-accent sm:text-4xl"
