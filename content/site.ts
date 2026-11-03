@@ -6,7 +6,7 @@ export const site = {
   role: "Painting & visual art",
   tagline: "Paintings about light, memory, and the quiet parts of a room.",
   intro:
-    "I'm Goldie, a painter from the Chicagoland area,working mainly in acrylic and mixed media. My work centers around a raw, illustrative comic style with a heavy gothic/punk influence.",
+    "I'm Goldie, a painter from the Chicagoland area, working mainly in acrylic and mixed media. My work centers around a raw, illustrative comic style with a heavy gothic/punk influence.",
   email: "goldiesnft@gmail.com",
   links: [
     { label: "Instagram", href: "https://www.instagram.com/GoldiesNFTart" },
@@ -74,6 +74,7 @@ export type Project = {
   image?: string;
   width?: number;
   height?: number;
+  links?: { href: string; label: string }[];
   href?: string;
   linkLabel?: string;
 };
@@ -143,6 +144,27 @@ export const projects: Project[] = [
     href: "https://opensea.io/collection/scary-garys",
     linkLabel: "OpenSea collection",
   },
+  {
+    slug: "rolling-stone-coinbase",
+    title: "Rolling Stone x Coinbase",
+    year: "2022",
+    kind: "Collaboration",
+    summary:
+      "Rolling Stone & Coinbase partnered with 12 digital artists to reimagine the iconic Rolling Stone logo, in celebration of a new form of artistry & talent in the world of NFTs.",
+    image: "/art/rollingstone.png",
+    width: 1600,
+    height: 1600,
+    links: [
+      {
+        href: "https://www.rollingstone.com/culture/culture-features/rolling-stone-and-coinbase-nft-drop-1292861/",
+        label: "Rolling Stone article",
+      },
+      {
+        href: "https://og.rarible.com/token/0x1f677c0b0c3792b3031cfc41521d0629aa9ce360:58472653741693882136970028497623479695272297541097779260954760618212669259777",
+        label: "Rarible",
+      },
+    ],
+  },
 ];
 
 // Placeholders — replace with your own work. `kind` decides which section of
@@ -203,6 +225,17 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "sobotime",
+    title: "SOBOTIME!",
+    year: "2023",
+    medium: "Acrylic paint, oil pen, and digital",
+    dimensions: "943 × 1200 px",
+    image: "/art/sobotime.JPG",
+    width: 943,
+    height: 1200,
+    kind: "digital",
+  },
+  {
     slug: "bruno",
     title: "Bruno",
     year: "2021",
@@ -252,6 +285,25 @@ export const works: Work[] = [
         collection: "KnownOrigin",
         identifier: "Token #1792000",
         url: "https://opensea.io/item/ethereum/0xabb3738f04dc2ec20f4ae4462c3d069d02ae045b/1792000",
+        label: "OpenSea",
+      },
+    ],
+  },
+  {
+    slug: "made-in-japan",
+    title: "MADe In Japan",
+    year: "2021",
+    medium: "Acrylic paint, oil pen, and oil pastels on canvas",
+    dimensions: "9 × 12 in",
+    image: "/art/madeinjapan.jpeg",
+    width: 1600,
+    height: 1196,
+    kind: "physical",
+    tokens: [
+      {
+        chain: "Ethereum",
+        standard: "ERC-721",
+        url: "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/82072708721342058041414421871050035180110027204151684953782159087430763806721",
         label: "OpenSea",
       },
     ],

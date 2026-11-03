@@ -55,17 +55,22 @@ export default function ProjectsPage() {
               <p className="mt-3 max-w-xl leading-relaxed text-muted">
                 {project.summary}
               </p>
-              {project.href ? (
-                <p className="mt-4">
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm text-muted underline decoration-line underline-offset-4 transition-colors hover:text-accent"
-                  >
-                    {project.linkLabel ?? "More"} &rarr;
-                  </a>
-                </p>
+              {project.links || project.href ? (
+                <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                  {(project.links ?? [
+                    { href: project.href!, label: project.linkLabel ?? "More" },
+                  ]).map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm text-muted underline decoration-line underline-offset-4 transition-colors hover:text-accent"
+                    >
+                      {link.label} &rarr;
+                    </a>
+                  ))}
+                </div>
               ) : null}
             </div>
           </li>

@@ -23,9 +23,9 @@ Almost everything lives in one file: [`content/site.ts`](content/site.ts).
 - `projects` — commissions, collaborations, murals, and open-studio projects
   shown on `/projects`. Each entry needs `slug`, `title`, `year`, `kind`, and
   `summary`, and optionally `with` (collaborator or client), `image`, `width`,
-  `height`, `href`, and `linkLabel`. Project images use their real pixel
-  dimensions and are not cropped. They are listed in the order written, so
-  newest-first is just editing order.
+  `height`, `href`, `linkLabel`, or `links` for multiple external links.
+  Project images use their real pixel dimensions and are not cropped. They are
+  listed in the order written, so newest-first is just editing order.
 - `works` — the gallery. Each entry needs `slug`, `title`, `year`, `medium`,
   `image`, `width`, `height`, and `kind`, and optionally `dimensions`,
   `tokens`, and `featured`. Works marked `featured: true` also appear on the
