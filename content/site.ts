@@ -352,6 +352,17 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "hear-no-evil",
+    title: "Hear no Evil",
+    year: "2022",
+    medium: "Acrylic paint and oil pen on canvas",
+    dimensions: "11 × 14 in",
+    image: "/art/hearnoevil.JPG",
+    width: 1224,
+    height: 1600,
+    kind: "physical",
+  },
+  {
     slug: "quiet",
     title: "Quiet",
     year: "2024",
