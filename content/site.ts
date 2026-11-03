@@ -86,32 +86,28 @@ export type Project = {
 // Placeholders — replace with your own commissions, collaborations, and murals.
 export const projects: Project[] = [
   {
-    slug: "mural-main-street",
-    title: "Main Street Mural",
-    year: "2025",
-    kind: "Mural commission",
-    with: "City Arts Council",
+    slug: "gary-ghosts",
+    title: "Gary Ghosts",
+    year: "2027 (future)",
+    kind: "Future project",
     summary:
-      "A four-metre exterior mural for a storefront wall, painted over eight days with a scaffold and a small crew. Built around the same light-and-interior vocabulary as the studio work, scaled up.",
-    href: "https://instagram.com/goldiesnft",
-    linkLabel: "Process photos",
+      "Goldie returns with the Gary Ghosts. Gary Ghosts are based on the childhood act of pretending to be a ghost by throwing a sheet over your head. Let this collection take you back to your childhood and bring you happiness. Gary Ghosts are apart of the Scary Garys family.",
+    image: "/art/garyghost.png",
+    width: 2000,
+    height: 2000,
   },
   {
-    slug: "late-light-collaboration",
-    title: "Late Light, together",
+    slug: "based-art-v6",
+    title: "Based Art V6",
     year: "2024",
-    kind: "Collaboration",
-    with: "a poet and a sound artist",
+    kind: "Bitcoin Ordinals collection",
     summary:
-      "A joint exhibition pairing twelve paintings with twelve short texts and a looping room recording. Each painting was made in response to a text, and each text revised against the finished panel.",
-  },
-  {
-    slug: "studio-open-house",
-    title: "Open Studio Weekend",
-    year: "2024",
-    kind: "Open studio",
-    summary:
-      "Two days of open doors: works in progress on the wall, unfinished panels face-out, and the whole collection laid out for viewing. The annual chance to see things before they are resolved.",
+      "Based Art and Goldie bring you a limited collection of 11 pieces, inscribed as 3D digital artifacts on the Bitcoin blockchain.",
+    image: "/art/bitcoin.JPG",
+    width: 1067,
+    height: 1600,
+    href: "https://www.satflow.com/ordinals/goldie",
+    linkLabel: "Satflow collection",
   },
   {
     slug: "crudeboys",
