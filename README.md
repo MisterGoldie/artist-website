@@ -78,9 +78,9 @@ Page copy that isn't artist-specific (headings, button labels) lives in
    with the file's real pixel `width` and `height`, and a `kind`.
 
 `width`/`height` matter: the gallery never crops artwork, so each image renders
-at its true aspect ratio. Portrait, landscape, and square pieces can sit next to
-each other in the same two-column grid. Getting the numbers wrong distorts the
-layout, not the art — the image is scaled to the box you declare.
+at its true aspect ratio. Works are shown one per row in a centred column, so a
+portrait piece is simply taller than a landscape one. Getting the numbers wrong
+distorts the layout, not the art — the image is scaled to the box you declare.
 
 The six SVG files currently in `public/art/` are generated abstract
 placeholders, deliberately at mixed aspect ratios so the layout can be checked

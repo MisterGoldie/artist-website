@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { WorkCard } from "@/components/work-card";
-import { works, type WorkKind } from "@/content/site";
+import { worksByYear, type WorkKind } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Works",
@@ -34,7 +34,7 @@ export default function WorksPage() {
       </p>
 
       {sections.map((section) => {
-        const items = works.filter((work) => work.kind === section.kind);
+        const items = worksByYear.filter((work) => work.kind === section.kind);
         if (items.length === 0) return null;
 
         return (
@@ -49,9 +49,9 @@ export default function WorksPage() {
             </div>
             <p className="mt-3 max-w-md text-sm text-muted">{section.blurb}</p>
 
-            <div className="mt-10 grid items-start gap-x-10 gap-y-16 md:grid-cols-2 md:[&>figure:nth-child(even)]:mt-28">
+            <div className="mx-auto mt-12 max-w-2xl space-y-20">
               {items.map((work, index) => (
-                <WorkCard key={work.slug} work={work} priority={index < 2} />
+                <WorkCard key={work.slug} work={work} priority={index === 0} />
               ))}
             </div>
           </section>

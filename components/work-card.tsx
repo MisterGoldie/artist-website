@@ -17,7 +17,7 @@ export function WorkCard({
           width={work.width}
           height={work.height}
           priority={priority}
-          sizes="(min-width: 768px) 46vw, 92vw"
+          sizes="(min-width: 768px) 672px, 92vw"
           className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.01]"
         />
       </div>

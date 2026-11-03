@@ -44,7 +44,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="mt-12 grid items-start gap-x-10 gap-y-16 md:grid-cols-2 md:[&>figure:nth-child(even)]:mt-28">
+        <div className="mx-auto mt-12 max-w-2xl space-y-20">
           {featuredWorks.map((work, index) => (
             <WorkCard key={work.slug} work={work} priority={index === 0} />
           ))}

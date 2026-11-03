@@ -122,9 +122,9 @@ export const works: Work[] = [
     year: "2026",
     medium: "Digital work",
     dimensions: "2000 × 2000 px",
-    image: "/art/lastdays.png",
-    width: 2000,
-    height: 2000,
+    image: "/art/lastdays.jpg",
+    width: 1600,
+    height: 1600,
     kind: "digital",
     tokens: [
       {
@@ -133,6 +133,26 @@ export const works: Work[] = [
         collection: "October 2026",
         identifier: "Token #1",
         url: "https://opensea.io/item/base/0xb62e827f4cbe8005646c538a2ec9b754106fb34c/1",
+        label: "OpenSea",
+      },
+    ],
+  },
+  {
+    slug: "raymone",
+    title: "Raymone",
+    year: "2023",
+    medium: "Digital painting",
+    image: "/art/raymone.jpeg",
+    width: 1170,
+    height: 1170,
+    kind: "digital",
+    tokens: [
+      {
+        chain: "Zora",
+        standard: "ERC-721",
+        collection: "Characters",
+        identifier: "Token #2",
+        url: "https://opensea.io/item/zora/0xf0ad795f0a2cfb5fd3cdc419bfc58a18feef2ca1/2",
         label: "OpenSea",
       },
     ],
@@ -206,8 +226,8 @@ export const works: Work[] = [
     medium: "Acrylic and oil pen on canvas",
     dimensions: "11 × 14 in",
     image: "/art/bruno.jpeg",
-    width: 2655,
-    height: 3399,
+    width: 1250,
+    height: 1600,
     kind: "physical",
   },
   {
@@ -217,9 +237,41 @@ export const works: Work[] = [
     medium: "Acrylic paint and oil pen",
     dimensions: "11 × 14 in",
     image: "/art/gacy.jpeg",
-    width: 1560,
-    height: 2013,
+    width: 1240,
+    height: 1600,
     kind: "physical",
+  },
+  {
+    slug: "the-ufo",
+    title: "The UFO",
+    year: "2021",
+    medium: "Oil pastels and acrylic paint",
+    dimensions: "16 × 20 in",
+    image: "/art/theufo.jpeg",
+    width: 1273,
+    height: 1600,
+    kind: "physical",
+  },
+  {
+    slug: "guess-whos-coming-to-dinner",
+    title: "Guess Who's Coming to Dinner",
+    year: "2021",
+    medium: "Acrylic paint and oil pen",
+    dimensions: "16 × 20 in",
+    image: "/art/guesswho.jpeg",
+    width: 1243,
+    height: 1600,
+    kind: "physical",
+    tokens: [
+      {
+        chain: "Ethereum",
+        standard: "ERC-721",
+        collection: "KnownOrigin",
+        identifier: "Token #1792000",
+        url: "https://opensea.io/item/ethereum/0xabb3738f04dc2ec20f4ae4462c3d069d02ae045b/1792000",
+        label: "OpenSea",
+      },
+    ],
   },
   {
     slug: "not-lickitung",
@@ -228,8 +280,8 @@ export const works: Work[] = [
     medium: "Acrylic and oil pen",
     dimensions: "11 × 14 in",
     image: "/art/notlickitung.jpeg",
-    width: 2793,
-    height: 2179,
+    width: 1600,
+    height: 1248,
     kind: "physical",
     tokens: [
       {
@@ -249,8 +301,8 @@ export const works: Work[] = [
     medium: "Acrylic and oil pen on canvas",
     dimensions: "11 × 14 in",
     image: "/art/dumbzombie.jpeg",
-    width: 2269,
-    height: 2878,
+    width: 1261,
+    height: 1600,
     kind: "physical",
     tokens: [
       {
@@ -269,9 +321,9 @@ export const works: Work[] = [
     year: "2024",
     medium: "Acrylic and oil pen on canvas",
     dimensions: "20 × 20 in",
-    image: "/art/quiet.JPG",
-    width: 3067,
-    height: 3064,
+    image: "/art/quiet.jpg",
+    width: 1600,
+    height: 1598,
     kind: "physical",
     tokens: [
       {
@@ -285,6 +337,17 @@ export const works: Work[] = [
         label: "ordinals.com",
       },
     ],
+  },
+  {
+    slug: "steven",
+    title: "Steven",
+    year: "2024",
+    medium: "Acrylic paint and oil pen",
+    dimensions: "11 × 14 in",
+    image: "/art/steven.jpg",
+    width: 1233,
+    height: 1600,
+    kind: "physical",
   },
   {
     slug: "kitchen-table",
@@ -322,4 +385,10 @@ export const works: Work[] = [
   },
 ];
 
-export const featuredWorks = works.filter((work) => work.featured);
+/** Newest first. Sorting here means adding a work never needs manual reordering.
+ *  Handles plain years and ranges like "2024–2025" by reading the leading year. */
+const yearNum = (work: Work) => Number(work.year.slice(0, 4));
+
+export const worksByYear: Work[] = [...works].sort((a, b) => yearNum(b) - yearNum(a));
+
+export const featuredWorks = worksByYear.filter((work) => work.featured);
