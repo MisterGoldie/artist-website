@@ -230,7 +230,7 @@ export const works: Work[] = [
     year: "2023",
     medium: "Acrylic paint, oil pen, and digital",
     dimensions: "943 × 1200 px",
-    image: "/art/sobotime.JPG",
+    image: "/art/sobotime.jpg",
     width: 943,
     height: 1200,
     kind: "digital",
