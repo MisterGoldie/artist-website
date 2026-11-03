@@ -16,9 +16,9 @@ export default function WorksPage() {
         request.
       </p>
 
-      <div className="mt-12 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-16 grid items-start gap-x-10 gap-y-16 md:grid-cols-2 md:[&>figure:nth-child(even)]:mt-28">
         {works.map((work, index) => (
-          <WorkCard key={work.slug} work={work} priority={index < 3} />
+          <WorkCard key={work.slug} work={work} priority={index < 2} />
         ))}
       </div>
     </section>

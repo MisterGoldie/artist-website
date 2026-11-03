@@ -34,6 +34,10 @@ export type Work = {
   medium: string;
   dimensions?: string;
   image: string;
+  /** Intrinsic pixel size of the image file. Artwork is never cropped, so the
+   *  rendered box takes this aspect ratio. Update if you swap the file. */
+  width: number;
+  height: number;
   featured?: boolean;
 };
 
@@ -45,6 +49,8 @@ export const works: Work[] = [
     medium: "Acrylic and collage on panel",
     dimensions: "40 × 50 cm",
     image: "/art/afternoon-window.svg",
+    width: 1000,
+    height: 1250,
     featured: true,
   },
   {
@@ -54,6 +60,8 @@ export const works: Work[] = [
     medium: "Acrylic on linen",
     dimensions: "60 × 75 cm",
     image: "/art/quiet-room.svg",
+    width: 1400,
+    height: 1000,
     featured: true,
   },
   {
@@ -63,6 +71,8 @@ export const works: Work[] = [
     medium: "Oil on board",
     dimensions: "30 × 40 cm",
     image: "/art/late-light.svg",
+    width: 1100,
+    height: 1100,
     featured: true,
   },
   {
@@ -72,6 +82,8 @@ export const works: Work[] = [
     medium: "Acrylic and graphite on canvas",
     dimensions: "50 × 50 cm",
     image: "/art/kitchen-table.svg",
+    width: 1000,
+    height: 1250,
   },
   {
     slug: "two-chairs",
@@ -80,6 +92,8 @@ export const works: Work[] = [
     medium: "Acrylic on panel",
     dimensions: "45 × 60 cm",
     image: "/art/two-chairs.svg",
+    width: 1500,
+    height: 1000,
   },
   {
     slug: "gold-hour",
@@ -88,6 +102,8 @@ export const works: Work[] = [
     medium: "Oil and wax on board",
     dimensions: "25 × 35 cm",
     image: "/art/gold-hour.svg",
+    width: 1000,
+    height: 1250,
   },
 ];
 
