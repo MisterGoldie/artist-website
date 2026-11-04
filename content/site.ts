@@ -8,6 +8,7 @@ export const site = {
   intro:
     "I'm Goldie, a painter from the Chicagoland area, working mainly in acrylics and mixed media. My work centers around a raw, illustrative comic style with a heavy gothic/punk influence.",
   email: "goldiesnft@gmail.com",
+  secondaryEmail: "scarygarysnft@gmail.com",
   links: [
     { label: "Instagram", href: "https://www.instagram.com/GoldiesNFTart" },
     { label: "X", href: "https://x.com/GoldiesNFTart" },

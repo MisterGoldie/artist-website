@@ -17,13 +17,23 @@ export default function ContactPage() {
         way to reach me. I usually reply within a few days.
       </p>
 
-      <div className="mt-12 border-y border-line py-10 text-center">
-        <a
-          href={`mailto:${site.email}`}
-          className="font-display text-2xl break-words transition-colors hover:text-accent sm:text-4xl"
-        >
-          {site.email}
-        </a>
+      <div className="mt-12 border-y border-line text-center">
+        <div className="border-b border-line py-10">
+          <a
+            href={`mailto:${site.email}`}
+            className="font-display text-2xl break-words transition-colors hover:text-accent sm:text-4xl"
+          >
+            {site.email}
+          </a>
+        </div>
+        <div className="py-10">
+          <a
+            href={`mailto:${site.secondaryEmail}`}
+            className="font-display text-2xl break-words transition-colors hover:text-accent sm:text-4xl"
+          >
+            {site.secondaryEmail}
+          </a>
+        </div>
       </div>
     </section>
   );
