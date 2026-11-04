@@ -209,6 +209,7 @@ export const works: Work[] = [
     title: "Raymone",
     year: "2023",
     medium: "Digital painting",
+    dimensions: "1170 × 1170 px",
     image: "/art/raymone.jpeg",
     width: 1170,
     height: 1170,
