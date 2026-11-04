@@ -291,6 +291,17 @@ export const works: Work[] = [
     ],
   },
   {
+    slug: "untitled",
+    title: "Untitled",
+    year: "2021",
+    medium: "Acrylic paint and oil pastels",
+    dimensions: "11 × 14 in",
+    image: "/art/untitled.JPG",
+    width: 908,
+    height: 1200,
+    kind: "physical",
+  },
+  {
     slug: "made-in-japan",
     title: "MADe In Japan",
     year: "2021",
