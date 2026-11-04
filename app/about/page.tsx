@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/content/site";
 
@@ -13,6 +14,15 @@ export default function AboutPage() {
       <h1 className="font-display text-4xl tracking-tight sm:text-5xl">
         About
       </h1>
+
+      <Image
+        src="/art/livetv.jpg"
+        alt="Live TV artwork"
+        width={1179}
+        height={649}
+        sizes="(min-width: 1024px) 896px, calc(100vw - 3rem)"
+        className="mt-8 h-auto w-full"
+      />
 
       <div className="mt-12 grid gap-12 sm:grid-cols-[1fr_2fr]">
         <dl className="space-y-5 text-sm">
