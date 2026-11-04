@@ -27,7 +27,7 @@ export function WorkCard({
         <p className="mt-1 text-sm text-muted">
           <span className="block whitespace-nowrap">{work.medium}</span>
           <span className="block whitespace-nowrap">
-            {work.dimensions ? ` · ${work.dimensions}` : ""}
+            {work.dimensions ?? ""}
             <span className="tabular-nums"> · {work.year}</span>
           </span>
         </p>
