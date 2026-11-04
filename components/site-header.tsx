@@ -20,8 +20,13 @@ export function SiteHeader() {
         <Link
           href="/"
           className="font-display text-2xl tracking-tight hover:text-accent"
+          aria-label="Goldie, Mister Goldie, GoldiesNFTart"
         >
-          {site.name}
+          <span className="site-name-rotation" aria-hidden="true">
+            <span>{site.name}</span>
+            <span>Mister Goldie</span>
+            <span>GoldiesNFTart</span>
+          </span>
         </Link>
 
         <nav aria-label="Main">

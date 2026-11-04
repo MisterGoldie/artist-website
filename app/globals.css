@@ -26,3 +26,46 @@ body {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
+
+.site-name-rotation {
+  display: inline-grid;
+}
+
+.site-name-rotation > span {
+  grid-area: 1 / 1;
+  animation: site-name-fade 30s infinite;
+}
+
+.site-name-rotation > span:nth-child(2) {
+  animation-delay: -10s;
+}
+
+.site-name-rotation > span:nth-child(3) {
+  animation-delay: -20s;
+}
+
+@keyframes site-name-fade {
+  0%,
+  27% {
+    opacity: 1;
+  }
+
+  33%,
+  94% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-name-rotation > span {
+    animation: none;
+  }
+
+  .site-name-rotation > span:not(:first-child) {
+    display: none;
+  }
+}
