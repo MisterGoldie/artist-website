@@ -147,7 +147,7 @@ export const projects: Project[] = [
   },
   {
     slug: "rolling-stone-coinbase",
-    title: "Rolling Stone x Coinbase",
+    title: "Rolling Stone & Coinbase",
     year: "2022",
     kind: "Collaboration",
     summary:
