@@ -26,8 +26,10 @@ export function WorkCard({
         <p className="font-display text-xl leading-tight">{work.title}</p>
         <p className="mt-1 text-sm text-muted">
           {work.medium}
-          {work.dimensions ? ` · ${work.dimensions}` : ""}
-          <span className="tabular-nums"> · {work.year}</span>
+          <span className="whitespace-nowrap">
+            {work.dimensions ? ` · ${work.dimensions}` : ""}
+            <span className="tabular-nums"> · {work.year}</span>
+          </span>
         </p>
 
         {work.tokens?.length ? (
