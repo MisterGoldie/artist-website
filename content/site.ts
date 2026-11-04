@@ -346,7 +346,7 @@ export const works: Work[] = [
     slug: "dumb-zombie",
     title: "Dumb Zombie",
     year: "2022",
-    medium: "Acrylic paint and oil pen on canvas",
+    medium: "Acrylic paint, oil pen, and spray paint on canvas",
     dimensions: "11 × 14 in",
     image: "/art/dumbzombie.jpeg",
     width: 1261,
