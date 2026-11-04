@@ -25,8 +25,8 @@ export function WorkCard({
       <figcaption className="mt-4 border-t border-line pt-3">
         <p className="font-display text-xl leading-tight">{work.title}</p>
         <p className="mt-1 text-sm text-muted">
-          {work.medium}
-          <span className="whitespace-nowrap">
+          <span className="block whitespace-nowrap">{work.medium}</span>
+          <span className="block whitespace-nowrap">
             {work.dimensions ? ` · ${work.dimensions}` : ""}
             <span className="tabular-nums"> · {work.year}</span>
           </span>
