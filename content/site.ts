@@ -354,7 +354,7 @@ export const works: Work[] = [
   },
   {
     slug: "hear-no-evil",
-    title: "Hear no Evil",
+    title: "Hear no Evil (Self-Portrait)",
     year: "2022",
     medium: "Acrylic paint and oil pen on canvas",
     dimensions: "11 × 14 in",
