@@ -182,7 +182,6 @@ export const works: Work[] = [
     width: 1600,
     height: 1600,
     kind: "digital",
-    featured: true,
     tokens: [
       {
         chain: "Base",
@@ -193,6 +192,18 @@ export const works: Work[] = [
         label: "OpenSea",
       },
     ],
+  },
+  {
+    slug: "mistaken-identity",
+    title: "Mistaken Identity",
+    year: "2026",
+    medium: "Digital painting",
+    dimensions: "2000 × 2000 px",
+    image: "/art/mistakenidentity.png",
+    width: 2000,
+    height: 2000,
+    kind: "digital",
+    featured: true,
   },
   {
     slug: "monster-maxie",
