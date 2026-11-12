@@ -185,6 +185,17 @@ export const works: Work[] = [
     featured: true,
   },
   {
+    slug: "sobo-monster",
+    title: "SOBO monster",
+    year: "2026",
+    medium: "Digital painting",
+    dimensions: "2000 × 2000 px",
+    image: "/art/sobo.PNG",
+    width: 2000,
+    height: 2000,
+    kind: "digital",
+  },
+  {
     slug: "lastdays",
     title: "Last Days In October",
     year: "2026",
