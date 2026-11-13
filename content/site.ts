@@ -186,7 +186,7 @@ export const works: Work[] = [
   },
   {
     slug: "sobo-zombie",
-    title: "SOBO zombie",
+    title: "SOBO Zombie",
     year: "2026",
     medium: "Digital drawing",
     dimensions: "2000 × 2000 px",
@@ -197,7 +197,7 @@ export const works: Work[] = [
   },
   {
     slug: "sobo-troll",
-    title: "SOBO troll",
+    title: "SOBO Troll",
     year: "2026",
     medium: "Digital drawing",
     dimensions: "2000 × 2000 px",
