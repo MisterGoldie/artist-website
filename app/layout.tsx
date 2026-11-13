@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description: site.tagline,
     type: "website",
   },
+  other: {
+    "p:domain_verify": "8c0b31f01e887ca49bbf8d5885e97555",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
