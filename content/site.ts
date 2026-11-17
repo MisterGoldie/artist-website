@@ -129,7 +129,7 @@ export const projects: Project[] = [
     image: "/art/cupscriptions.PNG",
     width: 1500,
     height: 500,
-    href: "https://cupscriptions.vercel.app/",
+    href: "https://cupscriptions.xyz/",
     linkLabel: "Cupscriptions website",
   },
   {
